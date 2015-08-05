@@ -1,3 +1,7 @@
+## This script is designed to work with the Fst output of ANGSD given in msms_3pop_Fst.sh
+
+## Input: Rscript PBS_Calculation.R Filepath_to_Fst_output.txt Output_Filepath.txt
+
 arg <- commandArgs()
 
 filepath <- arg[6]
