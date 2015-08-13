@@ -9,14 +9,14 @@ fi
 
 ## Filepaths
 
-OUTPUT=~/Project/Output
-ANGSD=~/Project/Tools/ngsTools/angsd/
-ANC=~/Project/data/reference/chimpHg19.fa
-REALSFS=~/Project/Tools/ngsTools/angsd/misc/realSFS
-POP1BAMS=~/Project/data/Pop1_BAMs
-POP2BAMS=~/Project/data/Pop2_BAMs
-POP3BAMS=~/Project/data/Pop3_BAMs
-PBSPLOT=~/Project/Scripts/PBS_Sliding_Window_Plot.R
+OUTPUT=   ## Output folder
+ANGSD=   ## ANGSD Folder
+ANC=  ## The ancestral reference genome
+REALSFS=   ## Filepath to RealSFS, found in ANGSD/misc/
+POP1BAMS=  ## Filepath to the folder containing the BAM files for population 1
+POP2BAMS=  ## Filepath to the folder containing the BAM files for population 2
+POP3BAMS=  ## Filepath to the folder containing the BAM files for population 3
+PBSPLOT=   ## Filepath to the R script PBS_Sliding_Window_Plot.R
 
 ## Parameters
 WINSIZE=50000
