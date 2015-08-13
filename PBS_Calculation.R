@@ -1,4 +1,5 @@
 ## This script is designed to work with the Fst output of ANGSD given in msms_3pop_Fst.sh
+## It will output at text file with the global PBS values for population 1, 2, and 3 in rows 1, 2, and 3 respectively.
 
 ## Input: Rscript PBS_Calculation.R Filepath_to_Fst_output.txt Output_Filepath.txt
 
