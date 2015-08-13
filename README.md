@@ -8,10 +8,10 @@ and b) the production of site frequency spectra (SFS) from simulated data using 
 # PBS sliding window calculation for a set of BAM files from 3 populations
 
 ##Setup
-This analysis assumes you already a set of BAM files for each of the 3 populations. These need to be separated into their populations in different folders. BAM files can be downloaded from the 1000 Genomes Project (http://www.1000genomes.org), facilitated by SAMtools (www.http://samtools.sourceforge.net). As an example, we performed previous analysis on Peruvians, using Europeans and East Asians as an example (Please contact dean.ousby@googlemail.com for further details).
+This analysis assumes you already have a set of BAM files for each of the 3 populations. These need to be separated by population in 3 different folders.  As an example, we performed previous analysis on Peruvians, using Europeans and East Asians as an example. Our analysis used BAM files downloaded from phase 3 of the 1000 Genomes Project (http://www.1000genomes.org), facilitated by SAMtools (www.http://samtools.sourceforge.net).(Please contact dean.ousby@googlemail.com for further details).
 
-Analysis of Next Generation Sequencing Data (ANGSD) - available at http://popgen.dk/wiki/index.php/ANGSD
 ##Programs needed:
+Analysis of Next Generation Sequencing Data (ANGSD) v0.902 or above - available at http://popgen.dk/wiki/index.php/ANGSD
 R: The R Project for Statistical Computing - available at https://www.r-project.org
 
 ##Scripts needed from this repository:
@@ -21,13 +21,13 @@ PBS_Sliding_Window_Plot.R
 You will also need an ancestral reference sequence. A Hg19 ancestral sequence is available here: http://dna.ku.dk/~thorfinn/hg19ancNoChr.fa.gz
 
 ##Initial setup:
-You are required to download and install the programs and scripts listed above. At the start of the script 3pop_PBS.sh there are a list of filepaths that need to be filled in. You are also able to specify the window size and the step size used to scan the sequences with, under Parameters WINSIZE and STEPWISE respectively.
+After downloading and installing the scripts stated above, edit the script 3pop_PBS.sh by entering your local filepaths to the programs stated near the top of the code. You are also able to specify the window size and the step size used to scan the sequences with, under Parameters WINSIZE and STEPWISE respectively.
 
 Once these are completed, the script 3pop_PBS.sh can be run with the input:
 
 sh 3pop_PBS.sh outputfolder
 
-where you can specific the name of your output folder. Depending on the number of BAM files and the length of the sequences, this may take a few minutes to a number of days. For reference, a set of 18, 20, and 20 BAM files in pops 1, 2, and 3, for a whole chromosome 11 scan took roughly 24 hours. This will output a PBS plot of the sequence.
+where outputfolder is the name you want to assign to your results. Depending on the number of BAM files and the length of the sequences, this may take a few minutes to a number of days. For reference, a set of 18, 20, and 20 BAM files in pops 1, 2, and 3, for a whole chromosome 11 scan took roughly 24 hours. This will output a PBS plot of the sequence in your output folder.
 
 The computationally demanding part of the analysis is the SFS estimation. Once this has been performed, the latter half of this script (after Pairwise Fst) can be adjusted and rerun for different window and step sizes.
 
