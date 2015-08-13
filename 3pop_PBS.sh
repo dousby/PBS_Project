@@ -9,7 +9,6 @@ fi
 
 ## Filepaths
 
-MSMS=~/Project/Tools/msms/lib/msms.jar
 OUTPUT=~/Project/Output
 ANGSD=~/Project/Tools/ngsTools/angsd/
 ANC=~/Project/data/reference/chimpHg19.fa
