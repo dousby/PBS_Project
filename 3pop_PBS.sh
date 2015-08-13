@@ -17,7 +17,7 @@ REALSFS=~/Project/Tools/ngsTools/angsd/misc/realSFS
 POP1BAMS=~/Project/data/Pop1_BAMs
 POP2BAMS=~/Project/data/Pop2_BAMs
 POP3BAMS=~/Project/data/Pop3_BAMs
-PBSPLOT=~/Project/Scripts/PBS_Sliding_Window.R
+PBSPLOT=~/Project/Scripts/PBS_Sliding_Window_Plot.R
 
 ## Parameters
 WINSIZE=50000
