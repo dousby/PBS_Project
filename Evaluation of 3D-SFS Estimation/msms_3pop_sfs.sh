@@ -1,4 +1,4 @@
-# INPUT - OUTPUTFILENAME POP1NAME POP2NAME POP3NAME
+# INPUT - OUTPUTFILENAME 
 
 STARTTIME=$(date +%s)
 
@@ -9,9 +9,9 @@ fi
 
 # POPNAMES
 
-POP1=$2
-POP2=$3
-POP3=$4
+POP1=YRI
+POP2=CEU
+POP3=CHB
 
 # FILEPATHS
 
@@ -50,7 +50,7 @@ OUTFOLDER=$OUTPUT/$1
 java -jar $MSMS -ms $NSAMPLE $NREPS -t 600 -r 219 1000000 -I 3 $POP1SIZE $POP2SIZE $POP3SIZE -n 1 1.682020 -n 2 3.736830 -n 3 7.292050 -eg 0 2 116.010723 -eg 0 3 160.246047 -ma x 0.881098 0.561966 0.881098 x 2.797460 0.561966 2.797460 x -ej 0.028985 3 2 -en 0.028985 2 0.287184 -ema 0.028985 3 x 7.293140 x 7.293140 x x x x x -ej 0.197963 2 1 -en 0.303501 1 1 > $OUTFOLDER/msoutput.txt
 
 
-for i in 5;
+for i in 5; ## i equals the read depth used (this can be looped for multiple read depths)
 do
 
 OUTFOLDER=$OUTPUT/$1
