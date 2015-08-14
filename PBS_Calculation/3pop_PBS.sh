@@ -1,9 +1,21 @@
-## Input: sh 3pop_PBS Foldername
+## Input: sh 3pop_PBS Foldername Pop1name Pop2name Pop3name
 
 STARTTIME=$(date +%s)
 
 if [ -z $1 ]; then
 	echo Error: please provide output file name
+	exit 0
+fi
+if [ -z $2 ]; then
+	echo Error: please provide Pop1 name
+	exit 0
+fi
+if [ -z $3 ]; then
+	echo Error: please provide Pop2 name
+	exit 0
+fi
+if [ -z $4 ]; then
+	echo Error: please provide Pop3 name
 	exit 0
 fi
 

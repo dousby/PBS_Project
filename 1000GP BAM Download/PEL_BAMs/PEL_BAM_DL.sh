@@ -18,7 +18,7 @@ for i in $INDLIST; do
 
 NAME=`echo -n $i | tail -c 58`
 
-$SAMTOOLS view -h ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/phase3/$i 1> $FOLDER/PEL_BAMs/$NAME
+$SAMTOOLS view -h ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/phase3/$i 1 > $FOLDER/PEL_BAMs/$NAME
 
 done
 

@@ -1,17 +1,21 @@
-#1000GP BAM Download - a pipeline for download phase 3 BAM files from the 1000 Genomes Project
+#1000GP BAM Download
+## A pipeline for downloading phase 3 BAM files from the 1000 Genomes Project
 
 Note: This has been designed to work with phase 3 data from the 1000 Genomes Project, as of 14/08/2015.
 
-These scripts will facilitate the download of multiple individual BAM files from phase 3 of the 1000 Genomes Project (1000GP) separated into their respective populations. These scripts require you to clone the 1000GP BAM Download folder onto your local machine. As an example, these have been
+These scripts will facilitate the download of multiple individual BAM files from phase 3 of the 1000 Genomes Project (1000GP) separated into their respective populations. These scripts require you to clone the 1000GP BAM Download folder onto your local machine.
+
+As an example, we have designed these scripts to download three sets of BAM files for chromosome 1 for a group of 18 Peruvians (PEL), 20 Europeans (CEU), and 20 East Asians (CHB). However, these can easily be altered for any three lists of individuals and for any region.
 
 ##Additional Programs Needed
 SAMtools - available from http://samtools.sourceforge.net
 
-As an example, we have designed these scripts to download three sets of BAM files for chromosome 1 for a group of 18 Peruvians (PEL), 20 Europeans (CEU), and 20 East Asians (CHB). However, these can easily be altered for any 3 list of individuals and for any region.
 
-The 3 files, CEU_list.txt, CHB_list.txt and PEL_list.txt contain the names of individuals from each of the 3 populations from the 1000GP, one individual per line. These can be altered to download any list of individuals from the 1000GP. The file phase3_bamlist.txt contains filepaths for all the individuals within phase3 of the 1000GP.
+##Sample
+The three files, CEU_list.txt, CHB_list.txt and PEL_list.txt contain the names of individuals from each of the three populations of interest from the 1000GP, one individual per line. These can be altered to download any list of individuals from the 1000GP. The file phase3_bamlist.txt contains filepaths for all the individuals within phase 3 of the 1000GP.
 
-In each of the 3 population folders (CEU_BAMs, CHB_BAMs, and PEL_BAMs), is a download script. These contain filepaths at the start of the script that need to be altered to reflect your local directories. The last command:
+##Setup
+In each of the three population folders (CEU_BAMs, CHB_BAMs, and PEL_BAMs) is a download script. These contain filepaths at the start of the script that need to be altered to reflect your local directories. The last command:
 
 $SAMTOOLS view -h ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/phase3/$i 1 > $FOLDER/CEU_BAMs/$NAME
 
