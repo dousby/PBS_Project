@@ -1,6 +1,6 @@
 #PBS_Project
 
-This repository contains all the scripts used in the project 'Evaluation and application of improved site frequency spectrum estimation from low coverage sequencing data'
+This repository contains the scripts used in the project 'Evaluation and application of improved site frequency spectrum estimation from low coverage sequencing data'
 
 Scripts are divided into 3 folders based on their functions:
 
