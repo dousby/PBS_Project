@@ -1,10 +1,12 @@
 # PBS sliding window calculation for a set of BAM files from 3 populations
 
 ##Setup
-This analysis assumes you already have a set of BAM files for each of the 3 populations which are separated into three folders by population. I have provided a pipeline to facilitate BAM file download from the 1000 Genomes Project (found in PBS_Project/1000GP BAM Download). As an example, we performed previous analysis on Peruvians, using Europeans and East Asians as reference sequences. Please contact dean.ousby@googlemail.com for further details.
+This analysis assumes you already have a set of BAM files for each of the 3 populations which are separated into three folders by population. I have provided a pipeline to facilitate downloading BAM files from phase 3 of the 1000 Genomes Project (found in PBS_Project/1000GP BAM Download).
 
-##Programs needed:
+##Additional Programs Needed:
+
 Analysis of Next Generation Sequencing Data (ANGSD) v0.902 or above - available at http://popgen.dk/wiki/index.php/ANGSD
+
 R: The R Project for Statistical Computing - available at https://www.r-project.org
 
 ##Scripts needed from this repository:
@@ -24,7 +26,7 @@ sh 3pop_PBS.sh outputfolder pop1name pop2name pop3name
 
 where outputfolder is the name you want to assign to your results, and pop1name, pop2name, and pop3name are the names of your 3 populations.
 
-Depending on the number of BAM files and the length of the sequences, this may take a few minutes to a number of days. For reference, a set of 18, 20, and 20 BAM files in pops 1, 2, and 3, for a whole chromosome 11 scan took roughly 24 hours. This will output a PBS plot of the sequence in your output folder.
+Depending on the number of BAM files and the length of the sequences, this may take a few minutes to a number of days. For reference, a set of 18, 20, and 20 BAM files in pops 1, 2, and 3, for a whole chromosome 11 scan took roughly 14 hours. This will output a PBS plot of the sequence in your output folder.
 
 The computationally demanding part of the analysis is the SFS estimation. Once this has been performed, the latter half of this script (after Pairwise Fst) can be adjusted and rerun for different window and step sizes.
 

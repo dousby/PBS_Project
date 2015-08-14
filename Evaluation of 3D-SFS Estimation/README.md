@@ -14,20 +14,26 @@ msms commands are needed that produce genotypes for three populations. As an exa
 
 ##Programs needed:
 msms - available from http://www.mabs.at/ewing/msms/index.shtml
+
 ANGSD - available from http://popgen.dk/wiki/index.php/ANGSD
+
 R - available from https://www.r-project.org
 
-##Filepaths
+##Filepaths and Model
 The filepaths at the top of the script msms_3pop_SFS.sh need to be altered to reflect your local directories. You can also change the model used to simulate data by altering the msms command line entry.
 
 ##Read depth and error rate
 The read depth and error rate used to generate genotype likelihood data from the genotype output of msms. This is achieved by altering the i used in the loop below the msms command, and altering the MSTOGLF command parameter -err (currently 0.0075 comparable to the error rate found in the 1000 Genomes Project)
+
+##Input
 
 The input is:
 
 sh msms_3pop_sfs.sh outputfilename pop1name pop2name pop3name
 
 where you can specify your output folder name and the name of the 3 populations. For the Gutenkunst model, pop1 = YRI, pop2 = CEU, and pop3 = CHB. 
+
+##Output
 
 This will produce the probabilistic estimation of the 3D-SFS in your output folder, called $POP1.$POP2.$POP3.ml. It will also output the raw msms genotypes, called msoutput.txt, as well as the genotypes called by the two different genotype calling methods. These will be named $popname.geno.txt for the Hardy-Weinberg equilibrium prior, and $popname.geno.uni.txt for the uniform distribution prior. The script 3D-SFS_RMSE_Calculations.R contains all the R code to compute the 3D-SFS from these called genotypes, as well as calculate the RMSE (same as RMSD) for each method.
 

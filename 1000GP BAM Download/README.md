@@ -8,8 +8,8 @@ These scripts will facilitate the download of multiple individual BAM files from
 As an example, we have designed these scripts to download three sets of BAM files for chromosome 1 for a group of 18 Peruvians (PEL), 20 Europeans (CEU), and 20 East Asians (CHB). However, these can easily be altered for any three lists of individuals and for any region.
 
 ##Additional Programs Needed
-SAMtools - available from http://samtools.sourceforge.net
 
+SAMtools - available from http://samtools.sourceforge.net
 
 ##Sample
 The three files, CEU_list.txt, CHB_list.txt and PEL_list.txt contain the names of individuals from each of the three populations of interest from the 1000GP, one individual per line. These can be altered to download any list of individuals from the 1000GP. The file phase3_bamlist.txt contains filepaths for all the individuals within phase 3 of the 1000GP.
