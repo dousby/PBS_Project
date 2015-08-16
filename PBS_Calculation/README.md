@@ -9,6 +9,8 @@ Analysis of Next Generation Sequencing Data (ANGSD) v0.902 or above - available 
 
 R: The R Project for Statistical Computing - available at https://www.r-project.org
 
+qqman package in R - download in R via the command install.packages("qqman")
+
 ##Scripts needed from this repository:
 3pop_PBS.sh
 PBS_Sliding_Window_Plot.R
