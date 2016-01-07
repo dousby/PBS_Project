@@ -57,7 +57,7 @@ Est.Real.bias.summed.RMSD <- numeric(0)
 
 for(i in 5){  ## Where i equal the read depth/s used to calculate GLs
   
-  Est.3D.SFS <- paste(“$OUTPUTFOLDER“,i,”/Pop1.Pop2.Pop3.ml", sep="") # Change output folder to own directory
+  Est.3D.SFS <- paste("$OUTPUTFOLDER",i,"/Pop1.Pop2.Pop3.ml", sep="") # Change output folder to own directory
   Est.3D.SFS <- scan(Est.3D.SFS)
   Est.3D.SFS <- array(Est.3D.SFS, dim=c(nPop1+1,nPop2+1,nPop3+1))
   
